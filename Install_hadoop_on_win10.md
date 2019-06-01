@@ -72,18 +72,16 @@
 2. CD into ```path\Hadoop\sbin```, run ```start-dfs``` to start HDFS. As a sign of success, a ```hdfs namenode``` process and a ```hdfs datanode``` process will pop up
 3. Open [http://localhost:9870](http://localhost:9870) to view HDFS's backstage
 4. Run commands
-   | command                        | Result                        |
-   |:------------------------------:|:-----------------------------:|
-   |hadoop fs -ls /                 |list path "/"                  |
-   |hadoop fs -mkdir /test          |create directory ```/test```   |
-   |hadoop fs -rm /test1.txt        |remove file ```test1.txt```    |
-   |hadoop fs -rm -r /test          |remove directory ```/test```   |
-   |hadoop fs -put file /test       |upload file to HDFS ```/test```|
-   |hadoop fs -cat /test/test.txt   |view file content              |
-   |hadoop fs -cp URI[URI...] <dest>|copy file                      |
-   |hadoop fs -get <src> <localdst> |download file to local         |
-   |hadoop fs -mv URI[URI...] <dest>|move file                      |
-   |hadoop fs -du URI[URI...]       |show file's size               |
+   - ```hadoop fs -ls /```: list path "/"
+   - ```hadoop fs -mkdir /test```: create directory ```/test```
+   - ```hadoop fs -rm /test1.txt```: remove file ```test1.txt```
+   - ```hadoop fs -rm -r /test```: remove directory ```/test```
+   - ```hadoop fs -put file /test```: upload file to HDFS ```/test```
+   - ```hadoop fs -cat /test/test.txt```: view file content
+   - ```hadoop fs -cp URI[URI...] <dest>```: copy file
+   - ```hadoop fs -get <src> <localdst>```: download file to local
+   - ```hadoop fs -mv URI[URI...] <dest>```: move file
+   - ```hadoop fs -du URI[URI...]```: show file's size
 5. CD into ```path\Hadoop\sbin```, run ```stop-dfs``` to stop HDFS
 
 [1]: http://archive.apache.org/dist/hadoop/core/
