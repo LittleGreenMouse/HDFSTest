@@ -4,7 +4,7 @@
 
 ## Install Hadoop
 1. Download ```Hadoop-3.0.0.tar.gz``` from [Offical website][1]
-2. Download correction code [winutils][2] for Hadoop on Windows
+2. Download correction files [winutils][2] for Hadoop on Windows
 3. Install JDK1.8(use ```java -version``` to show jdk version)
 4. Decompression ```Hadoop-3.0.0.tar.gz``` to path/Hadoop, path can be any path on your computer
 5. Set a new environment variable ```HADOOP_HOME``` whose value is your Hadoop path
@@ -83,6 +83,21 @@
    - ```hadoop fs -mv URI[URI...] <dest>```: move file
    - ```hadoop fs -du URI[URI...]```: show file's size
 5. CD into ```path\Hadoop\sbin```, run ```stop-dfs``` to stop HDFS
+
+---
+
+## Set classpath for java program
+1. cmd mode
+   - Run ```hadoop classpath``` to get your all classpath
+   - Create a batch file ```setcp.bat```, in it write ```set classpath=%classpath%;``` and your classpath get last step to its tail
+   - Before you javac a java code, run ```setcp.bat``` in current path
+2. IDE mode
+   Add following folder to project dependency:
+   - ```path\Hadoop\share\hadoop\common```
+   - ```path\Hadoop\share\hadoop\hdfs```
+   - ```path\Hadoop\share\hadoop\mapreduce```
+   - ```path\Hadoop\share\hadoop\yarn```
+   - ```path\Hadoop\share\hadoop\common\lib```
 
 [1]: http://archive.apache.org/dist/hadoop/core/
 [2]: https://github.com/steveloughran/winutils
