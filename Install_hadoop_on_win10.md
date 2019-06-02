@@ -91,7 +91,7 @@
    - Run ```hadoop classpath``` to get your all classpath
    - Create a batch file ```setcp.bat```, in it write ```set classpath=%classpath%;``` and your classpath get last step to its tail
    - Before you javac a java code, run ```setcp.bat``` in current path
-2. IDE mode
+2. IDE mode  
    Add following folder to project dependency:
    - ```path\Hadoop\share\hadoop\common```
    - ```path\Hadoop\share\hadoop\hdfs```
